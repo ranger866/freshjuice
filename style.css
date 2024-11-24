@@ -273,27 +273,138 @@ html, body {
     color: #fff;
 }
 
-/* Media Queries for responsiveness */
+/* Mobile (portrait and landscape) and tablet adjustments */
 @media (max-width: 768px) {
+
+    /* Adjust navigation for smaller screens */
     .nav .nav-list {
-        display: none;
+        display: none;  /* Hide nav links */
     }
 
     .nav .ham-button {
-        display: block;
+        display: block;  /* Show hamburger button */
     }
 
+    /* Adjust container margins for mobile/tablet */
     .container {
         margin: 5%;
     }
 
+    /* Stack home content items vertically */
     .home-contents .content-items {
         width: 100%;
         flex-direction: column;
         text-align: center;
     }
 
-    .sidebar {
+    /* Adjust the size of images within content */
+    .content-items img {
+        width: 100%;
+        height: auto;
+        max-width: 15em;  /* Ensure images don't grow too large */
+    }
+
+    /* Adjust the variant carousel for smaller screens */
+    .varian-contents {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .varian-img .content-items {
         display: flex;
+        flex-direction: column;  /* Stack images vertically */
+    }
+
+    .varian-img .carousel .product-img {
+        width: 75%;  /* Adjust carousel image width */
+        height: auto;
+        object-fit: contain;
+        margin: 1em 0;
+    }
+
+    .button span {
+        font-size: 2em;  /* Make navigation arrows smaller */
+    }
+
+    /* Sidebar adjustments for mobile/tablet */
+    .sidebar {
+        width: 80%;  /* Increase sidebar width for easier navigation */
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.7); /* Add an overlay effect */
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    /* Adjust footer layout */
+    .foot .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Modify the footer's social media section */
+    .contact .sosmed {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .footer .contact .sosmed .icon {
+        width: 1.2em;
+        margin: 0 10px 0 0;
+    }
+
+    .footer .about p {
+        font-size: 0.9em;
+    }
+
+    .footer .cr {
+        margin: 10px 0;
+    }
+}
+
+/* Tablet adjustments (portrait/landscape) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Adjust home content for tablets */
+    .home-contents .content-items {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /* Adjust variant carousel for tablets */
+    .varian-img .carousel .product-img {
+        width: 50%;
+        margin: 1em;
+    }
+
+    .button span {
+        font-size: 2.5em; /* Make navigation arrows a bit larger for tablet */
+    }
+
+    /* Sidebar adjustments for tablet */
+    .sidebar {
+        width: 60%;  /* Reduce sidebar width slightly */
+    }
+
+    .footer .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+
+    .footer .contact {
+        width: 25%;
+    }
+
+    .footer .about {
+        width: 50%;
+    }
+
+    .footer .foot-img {
+        width: 25%;
+    }
+
+    /* Remove overlay for sidebar when active */
+    .sidebar.active {
+        background-color: rgba(0, 0, 0, 0.5);
     }
 }
