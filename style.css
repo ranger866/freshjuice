@@ -273,7 +273,7 @@ html, body {
     color: #fff;
 }
 
-/* Mobile (portrait and landscape) and tablet adjustments */
+/*(/* Mobile (portrait and landscape) and tablet adjustments */
 @media (max-width: 768px) {
 
     /* Adjust navigation for smaller screens */
@@ -407,4 +407,4 @@ html, body {
     .sidebar.active {
         background-color: rgba(0, 0, 0, 0.5);
     }
-}
+})*/
